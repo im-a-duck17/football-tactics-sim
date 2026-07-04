@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 
-# Project root = one folder above src
+# root = one folder above src
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 

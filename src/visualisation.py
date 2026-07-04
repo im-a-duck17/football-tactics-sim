@@ -7,16 +7,16 @@ def draw_passing_network(pass_pairs, average_positions, min_passes=3):
 
     pitch = Pitch(
         pitch_type="statsbomb",
-        pitch_color="#2E8B57",      # Green pitch
+        pitch_color="#2E8B57",      # similar to the green in a football pitch
         line_color="white",
         linewidth=2
     )
 
     fig, ax = pitch.draw(figsize=(14, 10))
 
-    ############################################
-    # Draw Passes
-    ############################################
+    
+    # drawing the passes
+    
 
     for (passer, receiver), count in pass_pairs.items():
 
@@ -45,9 +45,9 @@ def draw_passing_network(pass_pairs, average_positions, min_passes=3):
             alpha=min(0.25 + count / 20, 0.9)
         )
 
-    ############################################
-    # Draw Players
-    ############################################
+    
+    # drawing the players
+    
 
     for player, (x, y) in average_positions.items():
 
